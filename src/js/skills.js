@@ -1,6 +1,6 @@
 export default function () {
 	return `
-	<section id="skills">
+	<div class="skills">
 		<h2>Languages</h2>
 		<p> Here are the languages that I studied both during and outside of my studies:</p>
 		<br>
@@ -22,6 +22,6 @@ export default function () {
 			<li>React</li>
 			<li>Node.js</li>
 		</ul>
-	</section>
+	</div>
 	`
 }

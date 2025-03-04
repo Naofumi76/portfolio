@@ -1,6 +1,5 @@
 export default function () {
 	return `
-	<section id="school">
 		<div class="school">
 			<h1>Zone01</h1>
 			<p>
@@ -9,10 +8,5 @@ export default function () {
  			(such as Golang, Javascript, and Rust), while exercises consists of projects that are real applications of the language we learned.
 			</p>
 		</div>
-
-		<div class="school">
-			
-		</div>
-	</section>
 	`
 }
