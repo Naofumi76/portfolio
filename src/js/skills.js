@@ -1,8 +1,7 @@
 export default function () {
 	return `
 	<div class="skills">
-		<h2>Languages</h2>
-		<p> Here are the languages that I studied both during and outside of my studies:</p>
+		<h2>Here you can see what I'm most familiar with for development purposes.</h2>
 		<br>
 		<h3>Back-end</h3>
 		<ul>

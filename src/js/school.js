@@ -1,7 +1,10 @@
 export default function () {
 	return `
 		<div class="school">
-			<h1>Zone01</h1>
+		    <div>
+				<h1>Zone01 Rouen</h1>
+				<img src="img/zone01-b.png" alt="Zone01"/>
+			</div>
 			<p>
 			Zone01 is a private school at the Campus St Marc located in Rouen that offers a course to become a full-stack developer.
 			The program consists of multiple "piscines" and exercises. Each piscine is designed to help us understand and learn the basics of a language

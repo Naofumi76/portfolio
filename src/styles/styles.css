@@ -8,12 +8,16 @@ html,
 body {
 	height: 100%;
 	/* Full-screen height */
+	overflow-x: hidden;
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 	color: #e0e0e0;
 	background: #404040;
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
+	scrollbar-color: #00bcd4 #303030;
+    scrollbar-width: thin;
 }
 
 .navbar {
@@ -21,7 +25,7 @@ body {
 	background-color: #303030;
 	padding: 10px;
 	text-align: center;
-	position: fixed;
+	position: relative;
 	top: 2vh;
 
 	max-width: 40vmax;
@@ -105,7 +109,7 @@ ul {
 
 .footer {
 	align-self: center;
-	position: absolute;
+	position: flex;
 	bottom: 0;
 	width: 100vw;
 	display: flex;
