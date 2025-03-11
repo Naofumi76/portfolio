@@ -196,3 +196,37 @@ ul {
 	font-size: 16px;
 	font-weight: bold;
 }
+
+.scroll-container {
+    width: 50%;
+	left: 25%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.scrolling-list {
+    display: flex;
+    gap: 50px;
+    animation: scrollMid 20s linear infinite;
+    position: relative;
+}
+
+.scrolling-list li {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+@keyframes scrollMid {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
