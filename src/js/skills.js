@@ -1,4 +1,14 @@
 export default function () {
+    const backendItems = ['Python', 'Golang', 'SQL', 'SQLite3', 'GraphQL', 'Rust'];
+    const frontendItems = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+    
+    // Function to duplicate items for continuous scrolling effect
+    const createScrollingList = (items) => {
+        const itemsList = items.map(item => `<li>${item}</li>`).join('');
+        // Duplicate items to create continuous effect
+        return itemsList + itemsList;
+    };
+	
     return `
     <div class="skills">
         <h2>Here you can see what I'm most familiar with for development purposes.</h2>
@@ -6,23 +16,14 @@ export default function () {
         <h3>Back-end</h3>
         <div class="scroll-container">
             <ul class="scrolling-list">
-                <li>Python</li>
-                <li>Golang</li>
-                <li>SQL</li>
-                <li>SQLite3</li>
-                <li>GraphQL</li>
-                <li>Rust</li>
+                ${createScrollingList(backendItems)}
             </ul>
         </div>
 
         <h3>Front-end</h3>
         <div class="scroll-container">
             <ul class="scrolling-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
+                ${createScrollingList(frontendItems)}
             </ul>
         </div>
     </div>

@@ -222,11 +222,11 @@ ul {
 }
 
 @keyframes scrollMid {
-    0% {
-        transform: translateX(100%);
+    from {
+        margin-left: 0%;
     }
-    100% {
-        transform: translateX(-100%);
+    to {
+        margin-left: 100%;
     }
 }
 
