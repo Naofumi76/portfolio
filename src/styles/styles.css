@@ -17,7 +17,7 @@ body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	scrollbar-color: #00bcd4 #303030;
-    scrollbar-width: thin;
+	scrollbar-width: thin;
 }
 
 .navbar {
@@ -108,17 +108,13 @@ ul {
 
 
 .footer {
-	align-self: center;
-	position: flex;
-	bottom: 0;
-	width: 100vw;
+	margin-top: auto;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
 	background-color: #303030;
-	/* Dark footer */
 	color: #e0e0e0;
 	text-align: center;
 	padding: 10px;
