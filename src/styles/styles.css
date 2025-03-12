@@ -70,11 +70,22 @@ section {
 	h1 {
 		font-size: 3rem;
 		margin-bottom: 10px;
+		animation: slideInFromLeft 0.8s ease-out forwards;
 	}
 
 	p {
 		font-size: 1.5rem;
+		animation: slideInFromBottom 0.8s ease-out forwards;
+		animation-delay: 0.4s;
+		opacity: 0;
 	}
+
+
+
+	p:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
 }
 
 .about,
@@ -89,11 +100,45 @@ section {
 	p {
 		margin: 1vw auto;
 		max-width: 125ch;
+		animation: slideInFromBottom 0.8s ease-out forwards;
+		animation-delay: 0.3s;
+		opacity: 0;
 	}
 }
 
+.about h2, .school h1, .skills h2, .contact h2 {
+	animation: slideInFromLeft 0.8s ease-out forwards;
+}
 
+.school p, .skills h3{
+	animation: slideInFromBottom 0.8s ease-out forwards;
+	opacity: 0;
+}
 
+.school img {
+	animation: slideInFromRight 0.8s ease-out forwards;
+	opacity: 0;
+}
+
+.school p:nth-child(3) {
+	animation-delay: 0.2s;
+}
+
+.school p:nth-child(4) {
+	animation-delay: 0.4s;
+}
+
+.school p:nth-child(5) {
+	animation-delay: 0.6s;
+}
+
+.school p:nth-child(6) {
+	animation-delay: 0.8s;
+}
+
+.school p:nth-child(7) {
+	animation-delay: 1s;
+}
 
 ul {
 	list-style: none;
@@ -205,6 +250,13 @@ ul {
     position: relative;
     display: flex;
     justify-content: center;
+	animation: slideInFromBottom 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+.scroll-container:nth-child(5) {
+    animation-delay: 0.8s;
 }
 
 .scrolling-list {
@@ -229,4 +281,67 @@ ul {
         margin-left: 100%;
     }
 }
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.social-info .info {
+    animation: slideInFromRight 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.social-info .info:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.social-info .info:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.social-info .info:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.social-info .info:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.social-info .info:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.social-info .info:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
 
