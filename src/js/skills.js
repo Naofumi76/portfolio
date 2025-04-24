@@ -16,7 +16,8 @@ export default function () {
             </div>
 
             <div class="item item2"> Golang 
-            
+                <br>
+                <img src="img/languages-icons/golang.png" alt="golang" style="height: 50px;">
             </div>
 
             <div class="item item3"> SQL 
@@ -40,7 +41,8 @@ export default function () {
             </div>
 
             <div class="item item7"> Django 
-            
+                <br>
+                <img src="img/languages-icons/django.png" alt="django" style="height: 50px;">
             </div>
 
             <div class="item item8"> HTML 
