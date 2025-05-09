@@ -32,6 +32,12 @@ function loadContent(section) {
 			})
 			break
 
+		case "projects":
+			import('./projects.js').then(module => {
+				contentContainer.innerHTML = module.default()
+			})
+			break
+			
 		case "contact":
 			import('./contact.js').then(module => {
 				contentContainer.innerHTML = module.default()

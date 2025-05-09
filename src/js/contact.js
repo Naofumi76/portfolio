@@ -1,7 +1,7 @@
 export default function () {
 	return `
 	<div class="contact">
-		<h2>Contact</h2>
+		<h1>Contact</h2>
 		<p>Feel free to reach out to me!</p>
 		<div class="social-info">
 			<div class="info"> 			

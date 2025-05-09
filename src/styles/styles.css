@@ -12,23 +12,42 @@ body {
 	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
-	color: #e0e0e0;
-	background: #404040;
+	background: var(--main-bg);
+	color: var(--text-color);
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	scrollbar-color: #00bcd4 #303030;
 	scrollbar-width: thin;
 }
 
+:root {
+    --primary-color: #00bcd4;
+    --secondary-color: #ff6347;
+    --accent-color: #74369c;
+    --accent-light-color: #b67edb;
+    --dark-bg: #303030;
+    --darker-bg: #252525;
+    --main-bg: #404040;
+    --text-color: #e0e0e0;
+    --text-highlight: #ffffff;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+
 .navbar {
 	align-self: center;
-	background-color: #303030;
+	background-color: var(--dark-bg);
 	padding: 10px;
 	text-align: center;
 	position: relative;
 	top: 2vh;
 
-	max-width: 40vmax;
+	max-width: 50vmax;
 	z-index: 1000;
 	border-radius: 0.7vmax;
 }
@@ -53,7 +72,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-	color: #00bcd4;
+	color: var(--primary-color);
 }
 
 section {
@@ -173,11 +192,13 @@ ul {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: #74369c;
+	background-color: var(--dark-bg);
 	color: #e0e0e0;
 	text-align: center;
 	padding: 10px;
-	border-top: 1px solid #333;
+	border-top: 1px solid var(--accent-color);
+	z-index: 1001;
+	box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer p {
@@ -202,7 +223,7 @@ ul {
 }
 
 .link-highlight {
-	color: #FF6347;
+	color: var(--secondary-color);
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -403,4 +424,468 @@ ul {
     animation-delay: 1.2s;
 }
 
+/* Projects Section Styling */
+.projects {
+    padding: 80px 20px;
+    text-align: center;
+}
 
+.projects h2 {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    color: var(--text-highlight);
+    margin-bottom: 20px;
+}
+
+.projects p {
+    margin: 1vw auto;
+    max-width: 125ch;
+    animation: slideInFromBottom 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    width: 350px;
+    background-color: var(--dark-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInFromBottom 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    gap: 8px;
+}
+
+.tech-badge {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.project-link:hover {
+    background-color: #0097a7;
+}
+
+/* Timeline Styling */
+.timeline {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.timeline h3 {
+    margin-bottom: 30px;
+    color: var(--accent-light-color);
+    animation: slideInFromBottom 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    animation: slideInFromBottom 0.8s ease-out forwards;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    animation-delay: calc(1.2s + 0.2s * var(--i, 0));
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    animation: slideInFromRight 0.8s ease-out forwards;
+    animation-delay: calc(1.2s + 0.2s * var(--i, 0));
+}
+
+.timeline-item:nth-child(1) {
+    --i: 0;
+}
+
+.timeline-item:nth-child(2) {
+    --i: 1;
+}
+
+.timeline-item:nth-child(3) {
+    --i: 2;
+}
+
+.timeline-item:nth-child(4) {
+    --i: 3;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border: 4px solid var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+    top: 2px; 
+    transform: translateY(50%);
+    right: -14px;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -14px;
+    left: auto;
+}
+
+.timeline-item:nth-child(even)::after {
+    right: auto;
+    left: -14px;
+}
+
+.timeline-date {
+    position: absolute;
+    width: 100px;
+    background-color: var(--accent-color);
+    color: var(--text-highlight);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 4px;
+    top: 12px;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: -120px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: -120px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: var(--dark-bg);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* About Section Enhancements */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hobbies {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.hobbies h3 {
+    margin-bottom: 15px;
+    color: var(--accent-light-color);
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.hobby-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.hobby-list li {
+    display: block;
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px;
+    animation: slideInFromRight 0.8s ease-out forwards;
+    opacity: 0;
+    text-align: left;
+}
+
+.hobby-list li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.hobby-list li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.hobby-list li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.hobby-list li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.hobby-list li::before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Enhanced personalized home page styling */
+
+.home-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.greeting-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.greeting-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.time-greeting {
+    color: var(--primary-color);
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: var(--text-highlight);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+
+.skills-preview {
+    margin: 40px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.skills-preview h3 {
+    color: var(--text-highlight);
+    margin-bottom: 20px;
+}
+
+.skills-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-pill {
+    background: var(--dark-bg);
+    color: var(--text-highlight);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInScale 0.5s ease-out forwards;
+}
+
+.skill-pill:hover {
+    background: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+.quick-intro {
+    margin: 30px 0;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quick-intro p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.quick-intro p:last-child {
+    animation-delay: 1s;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+.cta-button.outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    animation-delay: 1.4s;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.outline:hover {
+    background: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

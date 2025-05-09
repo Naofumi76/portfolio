@@ -5,7 +5,7 @@ export default function () {
 
 	return `
     <div class="skills">
-        <h2>Here you can see what I'm most familiar with for development purposes.</h2>
+        <h1>Here you can see what I'm most familiar with for development purposes.</h2>
         <br>
         <h3>Language and tools</h3>
         <div class="scroll-container">
