@@ -47,30 +47,9 @@ export default function () {
 					<p>Currently studying at Zone01 Rouen and working on projects that connect people and simplify complex problems.</p>
 				</div>
 				
-				<div class="cta-container">
-					<a href="#" data-section="projects" class="cta-button outline">View My Work</a>
-					<a href="#" data-section="contact" class="cta-button outline">Get In Touch</a>
-				</div>
 			</div>
 		</div>
 	</div>
 	
-	<script>
-		// Add animation to skill pills
-		document.querySelectorAll('.skill-pill').forEach((pill, index) => {
-			pill.style.animationDelay = \`\${index * 0.1}s\`;
-		});
-		
-		// Make profile image interactive
-		const profileImage = document.querySelector('.profile-image-container');
-		if (profileImage) {
-			profileImage.addEventListener('mouseenter', () => {
-				profileImage.classList.add('hovered');
-			});
-			profileImage.addEventListener('mouseleave', () => {
-				profileImage.classList.remove('hovered');
-			});
-		}
-	</script>
 	`
 }
