@@ -4,21 +4,21 @@ export default function () {
             title: "Real-Time Forum",
             description: "A full-stack forum where users can create accounts, post topics, and comment on discussions. Implemented authentication, database storage, and real-time message conversation.",
             technologies: ["Golang", "JavaScript", "SQLite3", "HTML/CSS"],
-            image: "img/projects/forum.png",
+            image: "img/projects/real-time-forum.png",
             link: "https://github.com/Naofumi76/real-time-forum"
         },
         {
             title: "Lem-in",
             description: "An algorithm of ant colonies and their behaviors, demonstrating path-finding and swarm intelligence.",
             technologies: ["Golang"],
-            image: "img/projects/ant-farm.png",
+            image: "img/projects/lem-in.png",
             link: "https://github.com/Naofumi76/lem-in"
         },
         {
             title: "GraphQL (Zone01 GraphQL Dashboard)",
             description: "An interactive dashboard for visualizing student progress using the Zone01 GraphQL API. Includes authentication, profile informations, XP tracking, and audit insights with responsive, SVG-based data visualizations.",
             technologies: ["HTML/CSS", "JavaScript", "GraphQL", "JWT"],
-            image: "img/projects/graphql-dashboard.png",
+            image: "img/projects/graphql.png",
             link: "https://github.com/Naofumi76/graphql"
         },
         {
