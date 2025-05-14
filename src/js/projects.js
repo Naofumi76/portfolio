@@ -4,28 +4,28 @@ export default function () {
             title: "Real-Time Forum",
             description: "A full-stack forum where users can create accounts, post topics, and comment on discussions. Implemented authentication, database storage, and real-time message conversation.",
             technologies: ["Golang", "JavaScript", "SQLite3", "HTML/CSS"],
-            image: "img/projects/real-time-forum.png",
+            image: "src/img/projects/real-time-forum.png",
             link: "https://github.com/Naofumi76/real-time-forum"
         },
         {
             title: "Lem-in",
             description: "An algorithm of ant colonies and their behaviors, demonstrating path-finding and swarm intelligence.",
             technologies: ["Golang"],
-            image: "img/projects/lem-in.png",
+            image: "src/img/projects/lem-in.png",
             link: "https://github.com/Naofumi76/lem-in"
         },
         {
             title: "GraphQL (Zone01 GraphQL Dashboard)",
             description: "An interactive dashboard for visualizing student progress using the Zone01 GraphQL API. Includes authentication, profile informations, XP tracking, and audit insights with responsive, SVG-based data visualizations.",
             technologies: ["HTML/CSS", "JavaScript", "GraphQL", "JWT"],
-            image: "img/projects/graphql.png",
+            image: "src/img/projects/graphql.png",
             link: "https://github.com/Naofumi76/graphql"
         },
         {
             title: "Work In Progress: Social-Network",
             description: "A social network project that will include features like user profiles, posts, comments, and more. ",
             technologies: ["Golang", "HTML/CSS", "JavaScript", "React", "Next.js", "SQLite3", "Docker"],
-            image: "img/projects/zone01-api.png",
+            image: "src/img/projects/zone01-api.png",
             link: "https://github.com/Yssnogood/social-network"
         }
     ];

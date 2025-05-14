@@ -3,7 +3,7 @@ export default function () {
 		<div class="school">
 		    <div>
 				<h1>Zone01 Rouen</h1>
-				<img src="img/zone01-b.png" alt="Zone01"/>
+				<img src="src/img/zone01-b.png" alt="Zone01"/>
 			</div>
 			<p>
 			Zone01 is a private school at the Campus St Marc located in Rouen that offers a course to become a full-stack developer.
